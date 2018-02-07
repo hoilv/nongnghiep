@@ -14,6 +14,7 @@
     <link rel="stylesheet" href="/bower_components/Ionicons/css/ionicons.min.css">
     <!-- Theme style -->
     <link rel="stylesheet" href="/dist/css/AdminLTE.min.css">
+    <link rel="stylesheet" href="/bower_components/datatables.net-bs/css/dataTables.bootstrap.min.css">
     <!-- AdminLTE Skins. Choose a skin from the css/skins
          folder instead of downloading all of them to reduce the load. -->
     <link rel="stylesheet" href="/dist/css/skins/_all-skins.min.css">
@@ -193,6 +194,7 @@
                     <ul class="treeview-menu">
                         <li><a href="{{route('register_category_product')}}"><i class="fa fa-circle-o"></i> Tạo Danh Mục Sản Phẩm</a></li>
                         <li><a href="{{route('register_product')}}"><i class="fa fa-circle-o"></i> Tạo Sản Phẩm</a></li>
+                        <li><a href="{{route('list_product')}}"><i class="fa fa-circle-o"></i> Danh Sách Sản Phẩm</a></li>
                     </ul>
                 </li>
                 <li class="treeview">
@@ -488,6 +490,9 @@
 <script src="/plugins/jvectormap/jquery-jvectormap-1.2.2.min.js"></script>
 <script src="/plugins/jvectormap/jquery-jvectormap-world-mill-en.js"></script>
 <!-- jQuery Knob Chart -->
+<script src="/bower_components/datatables.net/js/jquery.dataTables.min.js"></script>
+<script src="/bower_components/datatables.net-bs/js/dataTables.bootstrap.min.js"></script>
+
 <script src="/bower_components/jquery-knob/dist/jquery.knob.min.js"></script>
 <!-- daterangepicker -->
 <script src="/bower_components/moment/min/moment.min.js"></script>
@@ -506,5 +511,7 @@
 <script src="/dist/js/pages/dashboard.js"></script>
 <!-- AdminLTE for demo purposes -->
 <script src="/dist/js/demo.js"></script>
+
+@yield('script')
 </body>
 </html>

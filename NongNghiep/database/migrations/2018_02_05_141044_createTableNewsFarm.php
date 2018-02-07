@@ -17,7 +17,8 @@ class CreateTableNewsFarm extends Migration
             $table->increments('id');
             $table->string('title');
             $table->text('content');
-            $table->text('author');
+            $table->string('image')->nullable();
+            $table->string('author')->nullable();
             $table->softDeletes();
             $table->timestamps();
         });

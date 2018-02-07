@@ -25,7 +25,11 @@ Route::group(['namespace' => 'Admin', 'prefix' => 'admin', 'middleware' => 'auth
 
     // Tao-San-Pham
     Route::get('/tao-san-pham', 'ProductsController@registerProduct')->name('register_product');
+    Route::get('/danh-sach-san-pham', 'ProductsController@listProduct')->name('list_product');
     Route::post('/luu-san-pham', 'ProductsController@saveProduct')->name('save_register_product');
+    Route::get('/xoa-san-pham/{id}', 'ProductsController@deleteProduct')->name('delete_product');
+    Route::get('/sua-san-pham/{id}', 'ProductsController@showEditProduct')->name('show_edit_product');
+    Route::post('/sua-san-pham', 'ProductsController@editProduct')->name('edit_product');
 
     Route::get('/logout', 'IndexController@logout')->name('admin_logout');
 });

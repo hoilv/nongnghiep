@@ -18,6 +18,8 @@ class CreateTableItemProduct extends Migration
             $table->integer('category_product_id')->nullable();
             $table->string('title');
             $table->text('content');
+            $table->string('image')->nullable();
+            $table->string('author')->nullable();
             $table->softDeletes();
             $table->timestamps();
         });
